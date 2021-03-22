@@ -1,0 +1,6 @@
+{
+    "require": {
+        "htmlburger/carbon-fields": "^3.2",
+        "jaeger/querylist": "^4.2"
+    }
+}
