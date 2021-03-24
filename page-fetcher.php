@@ -11,3 +11,27 @@
  * Text Domain: page-fetcher
  * Domain Path: languages
  */
+
+namespace PF;
+
+if ( ! defined( 'PF_PLUGIN_FILE' ) ) {
+    define( 'PF_PLUGIN_FILE', __FILE__ );
+}
+
+if ( ! defined( 'PF_PLUGIN_DIR' ) ) {
+    define( 'PF_PLUGIN_DIR', plugin_dir_path( PF_PLUGIN_FILE ) );
+}
+
+require_once PF_PLUGIN_DIR . 'vendor/autoload.php';
+
+function app() {
+    static $app;
+    if ( is_null( $app ) ) {
+        $app = new Application();
+        $app->bootstrap();
+    }
+
+    return $app;
+}
+
+app();
