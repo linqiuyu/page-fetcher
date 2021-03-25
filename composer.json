@@ -10,7 +10,8 @@
             "PF\\Processors\\": "processors"
         },
         "files": [
-            "includes/helpers.php"
+            "includes/helpers.php",
+            "vendor/htmlburger/carbon-fields/core/functions.php"
         ]
     }
 }

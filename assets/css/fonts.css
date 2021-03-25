@@ -1,0 +1,5 @@
+@font-face {
+    font-family:element-icons;
+    src: url("../fonts/element-icons.ttf"),
+         url("../fonts/element-icons.woff");
+}

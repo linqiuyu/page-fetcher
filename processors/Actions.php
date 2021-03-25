@@ -25,12 +25,11 @@ class Actions implements ProcessorInterface{
     }
 
     public function actions() {
-        add_action( 'after_setup_theme', [ Carbon_Fields::class, 'boot' ] );
-        add_action( 'carbon_fields_register_fields', [ $this->app['admin_options'], 'options' ] );
+
     }
 
     public function admin_actions() {
-
+        add_action( 'admin_menu', [ $this->app['admin_options'], 'options_page' ] );
     }
 
     public function template_actions() {
