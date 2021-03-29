@@ -3,6 +3,7 @@
 namespace PF;
 
 use PF\AdminOptions\AdminOptionsServiceProvider;
+use PF\Fetcher\FetcherServiceProvider;
 use PF\Processors\Actions;
 use PF\Processors\Filters;
 use Pimple\Container;
@@ -19,6 +20,7 @@ class Application extends Container {
 
     protected array $providers = [
         AdminOptionsServiceProvider::class,
+        FetcherServiceProvider::class,
     ];
 
     public array $processors = [

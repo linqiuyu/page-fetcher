@@ -2,7 +2,9 @@
     "require": {
         "htmlburger/carbon-fields": "^3.2",
         "jaeger/querylist": "^4.2",
-        "pimple/pimple": "^3.0"
+        "pimple/pimple": "^3.0",
+        "ext-json": "*",
+        "ext-iconv": "*"
     },
     "autoload": {
         "psr-4": {

@@ -38,7 +38,7 @@ class Options {
             plugin_dir_url( PF_PLUGIN_FILE ) . 'assets/css/fonts.css'
         );
 
-        echo '<div id="app"></div>';
+        echo '<div id="app"><app></app></div>';
     }
 
     /**
