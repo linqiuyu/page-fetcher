@@ -32,6 +32,9 @@ class Options {
             false,
             true
         );
+        wp_localize_script( 'page-fetch', 'page_fetch_settings', [
+            'locale' => $this->get_locale(),
+        ] );
 
         wp_enqueue_style(
             'page-fetch',
@@ -48,6 +51,20 @@ class Options {
      */
     public function get_rules() : array {
         return carbon_get_theme_option( Options::Page_ID ) ?: [] ;
+    }
+
+    /**
+     * 获取本地语言
+     *
+     * @return string
+     */
+    public function get_locale() : string {
+        global $wp_local_package;
+        if ( isset( $wp_local_package ) ) {
+            return $wp_local_package;
+        } else {
+            return get_locale();
+        }
     }
 
 }
